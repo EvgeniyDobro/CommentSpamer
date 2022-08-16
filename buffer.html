@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<style>
+                button {
+                               color:#4169E1; 
+                               background-color:#E0FFFF;
+                               border-radius:5px;
+                               cursor:pointer;
+                }
+                button:hover {
+                               background-color: #AFEEEE;
+                }
+                button:focus {
+                box-shadow: 0 0 0 3px lightskyblue;
+                background-color: #4682B4;
+                }
+</style>
+</head>
+<body>
+<p>УСТАНОВКА ПО</p>
+<input type="text" size="150"
+value="Добрый день. Вам назначен пакет на установку. Прошу в ближайшие сутки АРМ не выключать, а утром его перезагрузить." 
+id="myInput1"/> <p/>
+<button onclick="myFunction1()"> Copy Text </button>
+<script>
+                function myFunction1() {
+                  var copyText = document.getElementById("myInput1");
+                  copyText.select();
+                  document.execCommand("copy");
+                }
+</script>
+<hr color="#008B8B" width="1100" align="left">
+<p>НЕДОЗВОН</p>
+<input type="text" size="150"
+value="
+Добрый день. Проблема еще актуальна? Если да, то как с Вами связаться? 
+По указанному номеру    не получается до Вас дозвониться. 
+Пожалуйста, укажите корректный номер и время, когда с Вами можно будет связаться.
+" 
+id="myInput2"/> <p/>
+<button onclick="myFunction2()"> Copy Text </button>
+<script>
+                function myFunction2() {
+                  var copyText = document.getElementById("myInput2");
+                  copyText.select();
+                  document.execCommand("copy");
+                }
+</script>
+<hr color="#008B8B" width="1100" align="left">
+<p>ЗАПРОС IP</p>
+<input type="text" size="150"
+value="
+Добрый день! Прошу указать корректный IP-адрес компьютера, с которым нужно произвести работу.
+" 
+id="myInput3"/><p/>
+<button onclick="myFunction3()"> Copy Text </button>
+<script>
+                function myFunction3() {
+                  var copyText = document.getElementById("myInput3");
+                  copyText.select();
+                  document.execCommand("copy");
+                }
+</script>
+<hr color="#008B8B" width="1100" align="left">
+<p>ЗАПРОС IP OT</p>
+<input type="text" size="150"
+value="
+Добрый день!
+Для проведения работ необходимо сообщить IP-адрес МФУ(сканера).
+" 
+id="myInput4"/><p/>
+<button onclick="myFunction4()"> Copy Text </button>
+<script>
+                function myFunction4() {
+                  var copyText = document.getElementById("myInput4");
+                  copyText.select();
+                  document.execCommand("copy");
+                }
+</script>
+
+</body>
+</html>
