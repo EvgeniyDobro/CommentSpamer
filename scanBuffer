@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<style>
+                button {
+                               color:#4169E1; 
+                               background-color:#E0FFFF;
+                               border-radius:5px;
+                               cursor:pointer;
+                }
+                button:hover {
+                               background-color: #AFEEEE;
+                }
+                button:focus {
+                box-shadow: 0 0 0 3px lightskyblue;
+                background-color: #4682B4;
+                }
+</style>
+</head>
+<body>
+
+<input type="text" size="150"
+value="
+example@sberbank.ru
+" 
+id="mailOne"/> <p/>
+
+<input type="text" size="150"
+value="
+C200
+" 
+id="qualityScan"/> <p/>
+<input type="text" size="150"
+value="
+Lexmark MX310dn
+" 
+id="mfuName"/> <p/>
+<input type="text" size="150"
+value="
+10.182.35.47
+" 
+id="mfuIp"/> <p/>
+
+<button onclick="myFunction()"> Copy Text </button>
+<script>
+	function myFunction() {
+	  let mailOne = document.getElementById("mailOne");
+	  mailOne = mailOne.value;	  
+	  let qualityScan = document.getElementById("qualityScan");
+	  qualityScan = qualityScan.value;
+	  let mfuName = document.getElementById("mfuName");
+	  mfuName = mfuName.value;
+	  let mfuIp = document.getElementById("mfuIp");
+	  mfuIp = mfuIp.value;
+	  let result = `
+Уважаемый коллега!
+Выполнено добавление пользователя в адресную книгу ${mfuName} (${mfuIp})
+на почтовый адрес ${mailOne}
+${mailOne.split("@")[0]}-PDF-${qualityScan} кода быстрого доступа - #24
+${mailOne.split("@")[0]}-JPEG-${qualityScan} кода быстрого доступа - #25`;
+//	  result.select();
+//	  document.execCommand("copy");
+	  
+    var dummy = document.createElement("textarea");
+    // to avoid breaking orgain page when copying more words
+    // cant copy when adding below this code
+    // dummy.style.display = 'none'
+    document.body.appendChild(dummy);
+    //Be careful if you use texarea. setAttribute('value', value), which works with "input" does not work with "textarea". – Eduard
+    dummy.value = result;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);	 
+	};
+</script>
+
+
+</body>
+</html>
